@@ -646,6 +646,14 @@ Title="PS Test"
 </FILE>
 
 
+<!-- POST-INSTALL SCRIPT -->
+<FILE Run="/bin/pwsh">
+<INLINE>
+# Update folder permissions
+Install-Module -Name PSFramework -verbose
+</INLINE>
+</FILE>
+
 <FILE Run="/bin/bash" Method="remove">
 <INLINE>
 echo "------------------------------------"
