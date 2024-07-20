@@ -7,7 +7,7 @@
 <!ENTITY launch    "Settings/&name;">
 <!ENTITY plugdir   "/usr/local/emhttp/plugins/&name;">
 <!ENTITY plugin    "/boot/config/plugins/&name;">
-<!ENTITY pluginURL "https://raw.githubusercontent.com/x-radeon/unraid-powershell/main/PowerShell.plg">
+<!ENTITY pluginURL "https://raw.githubusercontent.com/Gaspack/unraid-powershell/main/PowerShell.plg">
 ]>
 
 <PLUGIN name="&name;" author="&author;" version="&version;" launch="&launch;" pluginURL="&pluginURL;" min="6.9.2" support="https://forums.unraid.net/topic/135932-plugin-powershell/">
@@ -647,7 +647,7 @@ Title="PS Test"
 
 
 <!-- POST-INSTALL SCRIPT -->
-<FILE Run="/bin/pwsh">
+<FILE Run="/usr/bin/env pwsh">
 <INLINE>
 # Update folder permissions
 Install-Module -Name PSFramework -verbose
